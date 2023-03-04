@@ -37,7 +37,7 @@ int main( void )
   if( child_pid == 0 )
   {
     execl("/bin/ls", "ls", NULL );
-    exit( EXIT_SUCCESS );
+    exit( EXIT_FAILURE );
   }
 
   waitpid( child_pid, &status, 0 );
